@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 @font-face {
   font-family: inter-light;
   src: url(/Inter/static/Inter-Light-slnt=0.ttf);
@@ -11,9 +12,12 @@
   font-family: inter-semiBold;
   src: url(/Inter/static/Inter-SemiBold-slnt=0.ttf);
 }
+main {
+  position: relative;
+}
 .card {
   height: 100vh;
-  padding: 30px;
+  
   border: 1px solid red;
 }
 
@@ -36,12 +40,39 @@
   height: 50%;
   font-size: 25px;
   padding: 50px 20px;
+  font-family: inter-light;
   /* border: 1px solid red; */
   text-align: center;
+  background: url(/images/pattern-quotes.svg) no-repeat center 30px, url(/images/pattern-curve.svg) no-repeat 0px 100%;
 }
-.testominial p {
-  margin-bottom: 10px;
+
+.testominial h5 {
+  margin-top: 20px;
+  font-size: 16px;
+  font-family: inter-semiBold;
 }
 .testominial span {
-  font-size: 20px;
+  font-family: inter-semiBold;
+  font-size: 16px;
+  color:  hsl(240, 18%, 77%);
 }
+.navigation {
+  position: absolute;
+  top: 21%;
+  left: 40%;
+  padding: 10px 10px;
+  z-index: 4;
+  /* border: 1px solid red; */
+  background: #ffffff;
+  display: flex;
+  justify-content: space-evenly;
+  border-radius: 20px;
+}
+.navigation button{
+  outline: none;
+  color: hsl(240, 18%, 77%);
+  background: transparent;
+  border: transparent;
+  padding: 0 5px;
+}
+
