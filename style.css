@@ -18,7 +18,7 @@ main {
 .card {
   height: 100vh;
   
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .card-image {
@@ -31,14 +31,17 @@ main {
   align-items: center;
 }
 .card-image img {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  overflow: hidden;
+  border-radius: 10px;
   /* visibility: hidden; */
 }
 .testominial {
   height: 50%;
   font-size: 25px;
+  line-height: 23px;
   padding: 50px 20px;
   font-family: inter-light;
   /* border: 1px solid red; */
@@ -48,12 +51,12 @@ main {
 
 .testominial h5 {
   margin-top: 20px;
-  font-size: 16px;
+  font-size: 20px;
   font-family: inter-semiBold;
 }
 .testominial span {
   font-family: inter-semiBold;
-  font-size: 16px;
+  font-size: 20px;
   color:  hsl(240, 18%, 77%);
 }
 .navigation {
@@ -70,9 +73,37 @@ main {
 }
 .navigation button{
   outline: none;
+  cursor: pointer;
   color: hsl(240, 18%, 77%);
   background: transparent;
   border: transparent;
   padding: 0 5px;
 }
-
+@media  (max-width: 350px) {
+  .card-image{
+    background: url(/images/pattern-bg.svg) no-repeat center top/cover;
+  }  
+}
+@media (min-width: 620px) {
+  .card {
+    display: flex;
+    flex-direction: row-reverse;
+    
+    
+  }
+  .card-image{
+    height: 100vh;
+    background: url(/images/pattern-bg.svg) no-repeat center center/contain;
+  }
+  
+  .testominial {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .testominial-details {
+    height: 50%;
+    border: 1px solid red;
+  }
+}
