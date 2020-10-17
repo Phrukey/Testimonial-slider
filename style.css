@@ -15,9 +15,12 @@
 main {
   position: relative;
 }
+.card-slider{
+  position: relative;
+}
 .card {
   height: 100vh;
-  
+  position: absolute;
   /* border: 1px solid red; */
 }
 
@@ -41,7 +44,6 @@ main {
 .testominial {
   height: 50%;
   font-size: 25px;
-  line-height: 23px;
   padding: 50px 20px;
   font-family: inter-light;
   /* border: 1px solid red; */
@@ -86,24 +88,51 @@ main {
 }
 @media (min-width: 620px) {
   .card {
-    display: flex;
-    flex-direction: row-reverse;
-    
-    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "testominial card-image" ;
   }
   .card-image{
     height: 100vh;
     background: url(/images/pattern-bg.svg) no-repeat center center/contain;
+    /* border: 1px solid red; */
+    grid-area: card-image;
   }
   
   .testominial {
     height: 100%;
     display: flex;
+    grid-area: testominial;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-end;
+    /* border: 1px solid red; */
+    text-align: left;
+    background: url(/images/pattern-quotes.svg) no-repeat center 35%, url(/images/pattern-curve.svg) no-repeat 0px 100%;
   }
   .testominial-details {
     height: 50%;
-    border: 1px solid red;
+    width: 100%;
+    font-size: calc(20px + 1vw);
+    padding: 20px;
+    margin-right: -22%;
+    /* border: 1px solid red; */
+    /* visibility: hidden; */
+  }
+  .name-tag {
+    display: flex;
+    align-items: flex-end;
+  }
+  .name-tag h5{
+    margin-right: 10px;
+  }
+  .navigation {
+    top: 43%;
+    left: 60%;
+    background: aquamarine;
+    border-radius: 35px;
+  }
+  .navigation button {
+    padding: 10px 20px 10px 20px;
   }
 }
