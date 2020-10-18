@@ -13,12 +13,8 @@
 </head>
 <body> 
   <main>
-    <section class="navigation">
-      <button><img src="/images/icon-prev.svg" alt="prev-button"></button>
-      <button><img src="/images/icon-next.svg" alt="next-button"></button>
-    </section>
     <section class="card-slider">
-      <section class="card" id="first-card">
+      <section class="card current-slide" id="first-card">
         <div class="card-image first-card-image">
           <img src="/images/image-tanya.jpg" alt="">
         </div>
@@ -51,7 +47,11 @@
         </div>
       </section>
     </section>  
+    <section class="navigation">
+      <button  id="prevbtn"><img src="/images/icon-prev.svg" alt="prev-button"></button>
+      <button id="nextbtn"><img src="/images/icon-next.svg" alt="next-button"></button>
+    </section>
   </main> 
-
+<script src="slider.js"></script>
 </body>
 </html>
