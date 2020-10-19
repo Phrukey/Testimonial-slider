@@ -8,13 +8,27 @@ slides.forEach((slide, index) => {
   slide.style.right = slideWidth * index + "px";
 })
 
+// const moveToSlide = (track,currentSlide) => {
+//   slider.style.transform = "translateX("+ targetSlide.style.right +")";
+//   currentSlide.classList.remove("currentSlide");
+//   targetSlide.classList.add("current-slide");
+// }
+
 nextButton.addEventListener("click", (e) => {
   const currentSlide = slider.querySelector(".current-slide");
   const nextSlide = currentSlide.nextElementSibling;
   const amountToMove = nextSlide.style.right;
 
-  slider.style.transform = "translateX(" + amountToMove +")";
-  currentSlide.style.display = "none";
+ slider.style.transform = "translateX("+ amountToMove +")";
+//  currentSlide.classList.remove("currentSlide");
+//  nextSlide.classList.add("current-slide");
+})
+prevButton.addEventListener("click", (e) => {
+  const currentSlide = slider.querySelector(".current-slide");
+  const prevSlide = currentSlide.nextElementSibling.previousElementSibling;
+  const amountToMove = prevSlide.style.right;
+
+  slider.style.transform = "translateX("+ amountToMove + ")";
 })
 
 

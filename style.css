@@ -12,25 +12,27 @@
   font-family: inter-semiBold;
   src: url(/Inter/static/Inter-SemiBold-slnt=0.ttf);
 }
-main {
-  position: relative;
+
+.card-track {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 .card-slider{
   position: relative;
-  /* overflow: hidden; */
+  width: 100%;
+  height: 100%;
+  transition: transform 250ms ease-in;
 }
 .card {
-  height: 100vh;
+  height: 100%;
   width: 100%;
-  
   position: absolute;
-  border: 1px solid red;
 }
 
 .card-image {
   height: 50%;
   background: url(/images/pattern-bg.svg) no-repeat center top/contain;
-  /* border: 1px solid red; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,7 +49,6 @@ main {
   font-size: 25px;
   padding: 50px 20px;
   font-family: inter-light;
-  /* border: 1px solid red; */
   text-align: center;
   background: url(/images/pattern-quotes.svg) no-repeat center 30px, url(/images/pattern-curve.svg) no-repeat 0px 100%;
 }
@@ -63,16 +64,16 @@ main {
   color:  hsl(240, 18%, 77%);
 }
 .navigation {
-  position: absolute;
-  top: 21%;
+  position: fixed;
+  top: 38%;
   left: 40%;
   padding: 10px 10px;
   z-index: 4;
-  border: 1px solid red;
   background: #ffffff;
   display: flex;
   justify-content: space-evenly;
   border-radius: 20px;
+  box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.2);
 }
 .navigation button{
   outline: none;
@@ -88,6 +89,11 @@ main {
   }  
 }
 @media (min-width: 620px) {
+  .card-track {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
   .card {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -96,7 +102,6 @@ main {
   .card-image{
     height: 100vh;
     background: url(/images/pattern-bg.svg) no-repeat center center/contain;
-    /* border: 1px solid red; */
     grid-area: card-image;
   }
   
@@ -107,7 +112,6 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-    /* border: 1px solid red; */
     text-align: left;
     background: url(/images/pattern-quotes.svg) no-repeat center 35%, url(/images/pattern-curve.svg) no-repeat 0px 100%;
   }
@@ -117,8 +121,6 @@ main {
     font-size: calc(20px + 1vw);
     padding: 20px;
     margin-right: -22%;
-    /* border: 1px solid red; */
-    /* visibility: hidden; */
   }
   .name-tag {
     display: flex;
@@ -128,9 +130,9 @@ main {
     margin-right: 10px;
   }
   .navigation {
-    top: 43%;
+    top: 85%;
     left: 60%;
-    background: aquamarine;
+    background: #ffffff;
     border-radius: 35px;
   }
 }
